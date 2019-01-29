@@ -1,3 +1,4 @@
+// graded: 4/10
 // Make a game about trees in the forest
 // To 
 // define a trees
@@ -26,7 +27,8 @@ function forest() {
   this.areaSquared = area[randSelect(area)]
   this.numberOfTrees = numberOfTreesList[randSelect(numberOfTreesList)]
   this.AddTrees = function(){
-  // something like return document.get.NumberofTrees
+  //make a new HTMLElement tree pictureIt
+  // need to find a way to make the a unique name everytime + dynamically change the src to reflect the tree.
     for(let i = 0; i < this.numberOfTrees; i++){
       document.createElement("img", src = "leaves/leavesColor/barkType/tree.jpg")
     }
@@ -38,8 +40,6 @@ function forest() {
 
 
 // what do the trees do when you scroll over them?
-    //make a new HTMLElement tree pictureIt
-    
     // Use this to make a scroll over effect
     //example picture for html below
     //<img onmouseover="js(function)" src="smiley.gif" alt="Some Picture Here">
@@ -54,4 +54,3 @@ function forest() {
 
 var tree1 = new trees()
 console.log(tree1.pictureIt())
-
