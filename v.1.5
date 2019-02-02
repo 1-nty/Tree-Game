@@ -1,0 +1,61 @@
+
+// graded: 4/10
+// Make a game about trees in the forest
+// To 
+// define a trees
+let leaves = [3400, 7200, 10000];
+let leavesColor = ['red','gold','green','brown','yellow'];
+let barkType = ['crusty', 'smooth', 'barky'];
+let area = ['1000km^2','50000km^2', '100000km^2']
+let numberOfTreesList = [1,2,3,5,7,10]
+function randSelect(li){
+  return li[Math.floor(Math.random() * li.length)]
+};
+
+function Tree() {
+  this.leaves = randSelect(leaves),
+  this.leavesColor = randSelect(leavesColor),
+  this.barkType = randSelect(barkType),
+  this.pictureIt = function(){
+    return `The tree has ${this.leaves} leaves of ${this.leavesColor} and a bark of ${this.barkType}`
+  }
+  
+}
+
+
+// draw a random number of trees in random places to the DOM? Totally Possible. Learn make new tags in html
+
+
+
+// define the forest   object1.content1 = object2
+function forest() {
+  this.areaSquared = area[randSelect(area)]
+  this.numberOfTrees = numberOfTreesList[randSelect(numberOfTreesList)]
+  this.AddTrees = function(){
+  //make a new HTMLElement tree pictureIt
+  // need to find a way to make the a unique name everytime + dynamically change the src to reflect the tree.
+    for(let i = 0; i < this.numberOfTrees; i++){
+      document.createElement("img", src = "leaves/leavesColor/barkType/tree.jpg")
+    }
+  }
+}
+  
+
+
+
+
+// what do the trees do when you scroll over them?
+    // Use this to make a scroll over effect
+    //example picture for html below
+    //<img onmouseover="js(function)" src="smiley.gif" alt="Some Picture Here">
+
+
+
+
+// how about what does the forest say when you chop down a tree?
+
+
+
+
+var tree1 = new trees()
+console.log(tree1.pictureIt())
